@@ -1,0 +1,57 @@
+Code is current as of September 16, 2016, and was created to run on MATALB 2014a and onward.
+
+If there are any problems with the code or suggestions, please contact me, Santiago Rodriguez, at sfrodriguez@ucdavis.edu.
+Before getting started I'd like to thank Professor Jesus De Loera, for giving me the oppurtunitiy to do research over the summer, as well as, 
+Professor Mimi Tsuruga for finding and helping me fix an error in Colley's Method which also appiled to Massey's Method. 
+
+
+In this folder there are five functions used to determine the winner in some sort of election. 
+All five functions follow the same input parameters ElectionMethod(CandidateName, VotingData) where,
+
+CandidateName contains the names of all the candidates in a current election. CandidateName is a cell arracy of character vectors, whose format is as follows, 
+
+C = {'Candidate1', 'Candidate2', ... ,'CandidateM'};
+
+VotingData is an n-by-m matrix where n is the number of voters and m is the number of candidates. Each row in VotingData represents a voters preference for
+every candidate ranging from 1 (worst) to 10 (best). VotingData has the following format,
+
+V = [ v_11, v_12, ..., v_1m; v_21, v_22, ..., v_2m; ... ;v_n1, v_n2,...,v_nm];
+
+The functions accept both explicit input, 
+ElectionMethod({'Candidate1', 'Candidate2', ... ,'CandidateM'}, [ v_11, v_12, ..., v_1m; v_21, v_22, ..., v_2m; ... ;v_n1, v_n2,...,v_nm]);
+
+or input given by variable names, 
+ElectionMethod(C,V);
+ 
+The latter input method is particularly handy when a large data set involved, as one can conver the data into a mat file and load it on MATLAB with a specific name.
+
+The output of each function is "The winner is CandidateName"
+
+Each function has a few lines of code commented out that makes the output a ranked list (highest to lowest). However instead of the candidates name appearing in the 
+corresponding rank, it is the candidates position on the CandidateName list that is displayed. To clarify, for a three candidate election we have, 
+
+C = {'Alice', 'Bob','Eve'};
+Based on the list, Alice = 1; Bob = 2; Eve = 3;
+
+After computing the results of the election with VotingData, we have the following ranking,
+
+Eve    Alice   Bob
+
+Our function would then give the following out put,
+
+Ranking: 
+3
+1
+2
+
+
+These are all the things you need to implement the code, thank you for reading. 
+
+-Santiago Rodriguez
+Mathematics B.S Class of 2017
+University of California, Davis
+
+
+
+
+
